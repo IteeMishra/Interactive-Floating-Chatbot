@@ -1,0 +1,119 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Chatbot Window */
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 450px; /* Increased width */
+    height: 700px; /* Increased height */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close Button */
+.chatbot-header button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* User and Bot Messages */
+.user-message, .bot-message {
+    max-width: 75%;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #f1f1f1;
+    color: black;
+    align-self: flex-start;
+}
+
+/* Chatbot Footer */
+.chatbot-footer {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.chatbot-footer input {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.chatbot-footer button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+/* Floating Chat Button */
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    width: 55px; /* Slightly bigger */
+    height: 55px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: vibrate 0.3s infinite alternate; /* Vibration effect */
+}
+
+/* Vibration Animation */
+@keyframes vibrate {
+    0% { transform: translateX(7px) rotate(0.8deg); }
+    100% { transform: translateX(-8px) rotate(-0.5deg); }
+}
